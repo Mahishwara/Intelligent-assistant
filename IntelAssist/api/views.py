@@ -97,3 +97,47 @@ def deleteBankAccount(request, pk):
     bank_account = BankAccount.objects.get(id=pk)
     bank_account.delete()
     return Response('Bank account was deleted!')
+
+
+
+@api_view(['GET'])
+def getTransactions(request):
+    transactions = Transaction.objects.all()
+    serializer = TransactionSerializer(transactions, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getTransaction(request, pk):
+    transaction = Transaction.objects.get(id=pk)
+    serializer = TransactionSerializer(transaction, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def createTransaction(request):
+    data = request.data
+    transaction = Transaction.objects.create(
+        name=data['name'],
+        type=data['type'],
+        catagery=data['type'],
+        bankaccountid=data['bankaccountid']
+    )
+    serializer = TransactionSerializer(transaction, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['PUT'])
+def updateTransaction(request, pk):
+    transaction = Transaction.objects.get(id=pk)
+    serializer = TransactionSerializer(transaction, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+
+@api_view(['DELETE'])
+def deleteTransaction(request, pk):
+    transaction = Transaction.objects.get(id=pk)
+    transaction.delete()
+    return Response('Transaction was deleted!')
