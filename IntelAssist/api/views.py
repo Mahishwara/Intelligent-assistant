@@ -9,7 +9,90 @@ def getRoutes(request):
         {'Endpoint': '/users/',
          'method': 'GET',
          'body': None,
-         'description': 'Return array accounts'}
+         'description': 'Return array users'
+         },
+        {
+            'Endpoint': '/users/id/',
+            'method': 'GET',
+            'body': None,
+            'description': 'Return a single user'
+        },
+        {
+            'Endpoint': '/users/create/',
+            'method': 'POST',
+            'body': {'body': ''},
+            'description': 'Creates new user with data set in post request'
+        },
+        {
+            'Endpoint': '/users/id/update',
+            'method': 'PUT',
+            'body': {'body': ''},
+            'description': 'Creates an existing user with data set in post request'
+        },
+        {
+            'Endpoint': '/users/id/delete',
+            'method': 'DELETE',
+            'body': None,
+            'description': 'Deletes and exiting user'
+        },
+        {'Endpoint': '/bankaccounts/',
+         'method': 'GET',
+         'body': None,
+         'description': 'Return array bank accounts'
+         },
+        {
+            'Endpoint': '/bankaccounts/id/',
+            'method': 'GET',
+            'body': None,
+            'description': 'Return a single bank account'
+        },
+        {
+            'Endpoint': '/bankaccounts/create/',
+            'method': 'POST',
+            'body': {'body': ''},
+            'description': 'Creates new bank account with data set in post request'
+        },
+        {
+            'Endpoint': '/bankaccounts/id/update',
+            'method': 'PUT',
+            'body': {'body': ''},
+            'description': 'Creates an existing bank account with data set in post request'
+        },
+        {
+            'Endpoint': '/bankaccounts/id/delete',
+            'method': 'DELETE',
+            'body': None,
+            'description': 'Deletes and exiting bank account'
+        },
+        {'Endpoint': '/transactions/',
+         'method': 'GET',
+         'body': None,
+         'description': 'Return array transactions'
+         },
+        {
+            'Endpoint': '/transactions/id/',
+            'method': 'GET',
+            'body': None,
+            'description': 'Return a single transaction'
+        },
+        {
+            'Endpoint': '/transactions/create/',
+            'method': 'POST',
+            'body': {'body': ''},
+            'description': 'Creates new transaction with data set in post request'
+        },
+        {
+            'Endpoint': '/transactions/id/update',
+            'method': 'PUT',
+            'body': {'body': ''},
+            'description': 'Creates an existing transaction with data set in post request'
+        },
+        {
+            'Endpoint': '/transactions/id/delete',
+            'method': 'DELETE',
+            'body': None,
+            'description': 'Deletes and exiting transaction'
+        }
     ]
     return Response(routes)
 
