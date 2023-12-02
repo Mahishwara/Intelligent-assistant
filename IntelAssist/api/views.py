@@ -48,6 +48,12 @@ def getRoutes(request):
             'description': 'Return a single bank account'
         },
         {
+            'Endpoint': '/bankaccounts/user/id',
+            'method': 'GET',
+            'body': None,
+            'description': 'Return array bank accounts one user'
+        },
+        {
             'Endpoint': '/bankaccounts/create/',
             'method': 'POST',
             'body': {'body': ''},
@@ -75,6 +81,18 @@ def getRoutes(request):
             'method': 'GET',
             'body': None,
             'description': 'Return a single transaction'
+        },
+        {
+            'Endpoint': '/transactions/type/str',
+            'method': 'GET',
+            'body': None,
+            'description': 'Return array transactions with one type'
+        },
+        {
+            'Endpoint': '/transactions/catagery/',
+            'method': 'GET',
+            'body': None,
+            'description': 'Return array transactions with one catagery'
         },
         {
             'Endpoint': '/transactions/create/',
@@ -156,6 +174,13 @@ def getBankAccount(request, pk):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def getBankAccountsUser(request, pk):
+    bank_account = BankAccount.objects.all().filter(userid=pk)
+    serializer = BankAccountSerializer(bank_account, many=True)
+    return Response(serializer.data)
+
+
 @api_view(['POST'])
 def createBankAccount(request):
     data = request.data
@@ -194,6 +219,27 @@ def getTransactions(request):
 @api_view(['GET'])
 def getTransaction(request, pk):
     transaction = Transaction.objects.get(id=pk)
+    serializer = TransactionSerializer(transaction, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getTransactionType(request, pk):
+    transaction = Transaction.objects.all().filter(type=pk)
+    serializer = TransactionSerializer(transaction, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getTransactionCategory(request, pk):
+    transaction = Transaction.objects.all().filter(category=pk)
+    serializer = TransactionSerializer(transaction, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getTransactionBankAccount(request, pk):
+    transaction = Transaction.objects.all().filter(bankaccountid=pk)
     serializer = TransactionSerializer(transaction, many=False)
     return Response(serializer.data)
 

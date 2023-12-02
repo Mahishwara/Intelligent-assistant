@@ -14,9 +14,13 @@ urlpatterns = [
     path('bankaccounts/<str:pk>/update/', views.updateBankAccount),
     path('bankaccounts/<str:pk>/delete/', views.deleteBankAccount),
     path('bankaccounts/<str:pk>/', views.getBankAccount),
+    path('bankaccounts/user/<str:pk>', views.getBankAccountsUser),
     path('transactions/', views.getTransactions),
     path('transactions/create', views.createTransaction),
     path('transactions/<str:pk>/update/', views.updateTransaction),
     path('transactions/<str:pk>/delete/', views.deleteTransaction),
     path('transactions/<str:pk>/', views.getTransaction),
+    path('transactions/type/<str:pk>', views.getTransactionType),
+    path('transactions/category/<str:pk>', views.getTransactionCategory),
+    path('transactions/bankaccount/<str:pk>', views.getTransactionBankAccount)
 ]
