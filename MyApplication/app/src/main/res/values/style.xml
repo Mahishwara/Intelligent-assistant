@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-    <style name="container">
-        <item name="colorContainer">@color/colorContainer</item>
-        <item name="android:alpha">0.5</item>
-    </style>
-</resources>
