@@ -23,7 +23,7 @@
         <Spinner
             android:id="@+id/spinnerAccounts"
             android:layout_width="135dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/shape_spinner_switch"
             tools:layout_editor_absoluteX="15dp"
             tools:layout_editor_absoluteY="7dp" />
@@ -31,7 +31,7 @@
         <Spinner
             android:id="@+id/spinnerCalendar"
             android:layout_width="135dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/shape_spinner_switch"
             tools:layout_editor_absoluteX="176dp"
             tools:layout_editor_absoluteY="7dp" />

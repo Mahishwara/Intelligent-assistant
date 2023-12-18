@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="accounts">
+        <item>Все счета</item>
+        <item>Счет 1</item>
+        <item>Счет 2</item>
+        <item>Счет 3</item>
+    </string-array>
+    <color name="backButton">#75BBFD99</color>
+    <color name="background">#1E1E1E</color>
+    <color name="black">#FF000000</color>
+    <color name="container">#382646</color>
+    <color name="itemList">#BA5050</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">My Application</string>
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication"/>
+</resources>

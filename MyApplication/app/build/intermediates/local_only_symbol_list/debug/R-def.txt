@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+array accounts
+color backButton
+color background
+color black
+color container
+color itemList
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable shape_button
+drawable shape_container
+drawable shape_spinner_switch
+id button
+id button2
+id button3
+id progressBar
+id progressBar2
+id spinnerAccounts
+id spinnerCalendar
+id switch1
+layout activity_main
+layout expenses
+layout revenue
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MyApplication
+style Theme.MyApplication
+xml backup_rules
+xml data_extraction_rules

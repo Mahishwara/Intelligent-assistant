@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background='@drawable/shape_container'
+        android:foregroundGravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/spinnerAccounts"
+            android:layout_width="177dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_spinner_switch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shape_spinner_switch"
+            android:paddingTop="5dp"
+            android:text="Общий остаток: 40 000 р  &#xA; Наличными: 895 р "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerAccounts" />
+
+        <EditText
+            android:id="@+id/textView2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shape_spinner_switch"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="+ 12 500 р  &#xA; Премия "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <EditText
+            android:id="@+id/textView3"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shape_spinner_switch"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="-2 000  &#xA; Оплата "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/textView4"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_spinner_switch"
+            android:paddingTop="5dp"
+            android:text="+ 500 р  &#xA; Перевод от Иванова.В.В "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:layout_editor_absoluteX="12dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

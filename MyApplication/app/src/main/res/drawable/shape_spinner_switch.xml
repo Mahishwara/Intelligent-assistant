@@ -3,4 +3,8 @@
     <solid android:color="@color/backButton">
     </solid>
     <corners android:radius="80dp"></corners>
+    <stroke
+        android:color="@color/black"
+        android:width="3dp">
+    </stroke>
 </shape>
