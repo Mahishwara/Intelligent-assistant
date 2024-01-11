@@ -33,9 +33,7 @@
     top: 0;
   }
 
-  .analytics{
-    display: block;
-  }
+ 
 
   aside .logo h3{
     display: none;
@@ -58,11 +56,7 @@
 
 @media (max-width: 1128px){
   
-  .analytics{
-    display: none;
-  }
 
-  
   .container{
     gap: 1rem;
     grid-template-columns: 7rem auto;
@@ -138,6 +132,9 @@
     }
   }
 
+  .sidebar{
+    max-height: 500px;
+  }
   .close{
     display: block;
     color: var(--color-dark);
@@ -175,7 +172,7 @@
   }
 
   .right .top .theme-toggler{
-    width: 4.4rem;
+    width: 2rem;
     position: absolute;
     right: 2rem;
   }

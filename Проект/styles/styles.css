@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
 :root {
   --primary-color: #7380ec;
   --btn-radius: 15px;
@@ -12,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Golos Text", sans-serif;
   text-decoration: none;
 }
 
@@ -64,7 +65,7 @@ header {
   font-size: 37px;
   line-height: 53px;
   text-align: center;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Golos Text', cursive;
 }
 
 nav {
@@ -152,7 +153,7 @@ section.app-preview {
 
 h2.section-title {
   font-size: 2rem;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Golos Text', cursive;
   max-width: 413px;
 }
 
@@ -337,7 +338,7 @@ p.section-paragraph {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  border-radius: 25px;
   width: 70%;
   margin: 10rem auto;
 }
