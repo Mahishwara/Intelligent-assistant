@@ -58,6 +58,11 @@
 
 @media (max-width: 1128px){
   
+  .analytics{
+    display: none;
+  }
+
+  
   .container{
     gap: 1rem;
     grid-template-columns: 7rem auto;

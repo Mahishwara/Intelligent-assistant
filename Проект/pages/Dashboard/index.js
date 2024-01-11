@@ -258,9 +258,6 @@ const Form = {
 var ctx = document.getElementById("myChart");
 var myDonutChart;
 
-var ctx2 = document.getElementById("myChart2");
-var myDonutChart2;
-
 const AddChart = {
   // Уничтожение существующего графика
   Destroy() {
@@ -296,7 +293,7 @@ const AddChart = {
             usePointStyle: true,
           },
         ],
-        labels: ["Нет транзакций"],
+        labels: ["No Transactions"],
       };
     }
     return data;
