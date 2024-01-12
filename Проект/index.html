@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <link rel="manifest" href="manifest.webmanifest">
+
     <!-- Подключение стилей для страницы -->
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/media.css" />
@@ -147,7 +149,8 @@
     <script>
       feather.replace();
     </script>
-
+    <!-- Подключение скрипта для сохраниеня кэша -->
+    <script src="app.js"></script>
     <!-- Скрипт для скрытия экрана загрузки после полной загрузки страницы -->
     <script>
       let spinner = document.querySelector('.loader-overlay');

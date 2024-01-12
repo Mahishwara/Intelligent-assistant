@@ -1,0 +1,15 @@
+{
+    "background_color":"white",
+    "description": "Интеллектуальный помощник по управлению финансами",
+    "display": "fullscreen",
+    "icons":[
+        {
+            "src": "icon.png",
+            "sizes": "192x192",
+            "type":"image/png"
+        }
+    ],
+    "name": "Интеллектуальный помощник",
+    "short_name": "ИТП",
+    "start_url": "../index.html"
+}
