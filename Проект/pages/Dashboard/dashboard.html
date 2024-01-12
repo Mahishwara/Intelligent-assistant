@@ -66,7 +66,16 @@
         <div class="topMenu">
           <h2 id="date-display"></h2>
         </div>
-
+        <div>
+          <section>
+            <select id="filter_score" name="score">
+              <option>Не выбран счет</option>
+              <option>Сбер 2586</option>
+              <option>Сбер 2587</option>
+              <option>Сбер 2588</option>
+            </select>
+          </section>
+        </div>
         <!-- Секция с балансом -->
         <section id="balance">
           <h2 class="sr-only">Баланс</h2>
@@ -127,6 +136,7 @@
                 <thead>
                   <tr>
                     <th>Описание</th>
+                    <th>Счет</th>
                     <th>Сумма</th>
                     <th>Дата</th>
                     <th></th>
@@ -182,6 +192,14 @@
               <label class="sr-only" for="description">Описание</label>
               <input type="text" id="description" name="description" placeholder="Описание" />
             </div>
+            <label for="score">Выберите счет</label>
+            <select id="score" name="score">
+              <option>Не выбран счет</option>
+              <option>Сбер 2586</option>
+              <option>Сбер 2587</option>
+              <option>Сбер 2588</option>
+            </select>
+            
 
             <div class="input-group">
               <label class="sr-only" for="amount">Сумма</label>

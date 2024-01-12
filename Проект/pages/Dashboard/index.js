@@ -84,9 +84,10 @@ const DOM = {
     const CSSclass = transaction.amount > 0 ? "income" : "expense";
 
     const amount = Utils.formatCurrency(transaction.amount);
-
+    var sellscore = document.getElementById("score").value
     const html = `
       <td class="description">${transaction.description}</td>
+      <td class="score">${sellscore}</td>
       <td class="${CSSclass}">${amount}</td>
       <td class="date">${transaction.date}</td>
       <td>
@@ -194,7 +195,7 @@ const Form = {
 
   // Валидация полей формы
   validateField() {
-    const { description, amount, date, incomeOrExpense } = Form.getValues();
+    const { description, score, amount, date, incomeOrExpense } = Form.getValues();
 
     if (
       description.trim() === "" ||
@@ -213,13 +214,14 @@ const Form = {
 
   // Форматирование значений формы перед добавлением транзакции
   formatValues() {
-    let { description, amount, date, value } = Form.getValues();
+    let { description, score, amount, date, value } = Form.getValues();
 
     amount = Utils.formatAmount(amount);
     date = Utils.formatDate(date);
 
     return {
       description,
+      score,
       amount,
       date,
     };
@@ -229,6 +231,7 @@ const Form = {
   clearFields() {
     Form.description.value = "";
     Form.amount.value = "";
+    Form.score.text = "Не выбран счет"
     Form.date.value = "";
     Form.value = "";
   },
