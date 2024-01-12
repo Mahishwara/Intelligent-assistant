@@ -52,6 +52,10 @@
             <span class="material-icons">logout</span>
             <p>На главную</p>
           </a>
+          <div class="theme-toggler">
+            <span class="material-icons active" id="toggle-light" onclick="ThemeToggler.Light()">light_mode</span>
+            <span class="material-icons" id="toggle-dark" onclick="ThemeToggler.Dark()">dark_mode</span>
+          </div>
         </div>
       </aside>
       <!-- Конец боковой панели (Sidebar) -->
@@ -67,13 +71,21 @@
         <section id="balance">
           <h2 class="sr-only">Баланс</h2>
 
+          
+             <!-- Секция с аналитикой и графиком баланса -->
+          <div class="analytics">
+            <h3>График | Доходы</h3>
+            <canvas id="myChart"></canvas>
+          </div>
+       
+          
           <!-- Карты для отображения Доходов, Расходов и Итога -->
           <div class="card">
             <h3>
               <span>Доходы</span>
               <img src="assets/incomes.svg" alt="Изображение доходов" />
             </h3>
-            <p id="incomeDisplay">Rub 0,00</p>
+            <p id="incomeDisplay">&#8381 0,00</p>
             <p id="dateDisplay"></p>
           </div>
 
@@ -82,7 +94,7 @@
               <span>Расходы</span>
               <img src="assets/expenses.svg" alt="Изображение расходов" />
             </h3>
-            <p id="expenseDisplay">Rub 0,00</p>
+            <p id="expenseDisplay">&#8381 0,00</p>
           </div>
 
           <div class="card total">
@@ -90,7 +102,7 @@
               <span>Итого</span>
               <img class="total" src="assets/total.svg" alt="Изображение итога" />
             </h3>
-            <p id="totalDisplay">Rub 0,00</p>
+            <p id="totalDisplay">&#8381 0,00</p>
           </div>
         </section>
         <!-- Конец секции с балансом -->
@@ -145,19 +157,10 @@
           </button>
 
           <!-- Переключатель темы для светлого и темного режима -->
-          <div class="theme-toggler">
-            <span class="material-icons active" id="toggle-light" onclick="ThemeToggler.Light()">light_mode</span>
-            <span class="material-icons" id="toggle-dark" onclick="ThemeToggler.Dark()">dark_mode</span>
-          </div>
+          
         </div>
 
-        <!-- Секция с аналитикой и графиком баланса -->
-        <div class="analytics">
-          <h3>График | Баланс</h3>
-          <div>
-            <canvas id="myChart"></canvas>
-          </div>
-        </div>
+       
       </div>
       <!-- Конец правой секции -->
     </div>

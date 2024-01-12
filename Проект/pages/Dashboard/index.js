@@ -258,6 +258,8 @@ const Form = {
 var ctx = document.getElementById("myChart");
 var myDonutChart;
 
+
+
 const AddChart = {
   // Уничтожение существующего графика
   Destroy() {
@@ -282,7 +284,7 @@ const AddChart = {
             usePointStyle: true,
           },
         ],
-        labels: ["Incomes", "Expenses"],
+        labels: ["Доходы", "Расходы"],
       };
     } else {
       data = {
