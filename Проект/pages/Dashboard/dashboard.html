@@ -69,7 +69,7 @@
         <div>
           <section class="filter-section">
             <select id="filter_score" name="score">
-              <option>Не выбран счет</option>
+              <option selected>Не выбран счет</option>
               <option>Сбер 2586</option>
               <option>Сбер 2587</option>
               <option>Сбер 2588</option>
@@ -143,6 +143,7 @@
                     <th>Описание</th>
                     <th>Счет</th>
                     <th>Сумма</th>
+                    <th>Категория</th>
                     <th>Дата</th>
                     <th></th>
                   </tr>
@@ -199,7 +200,7 @@
             </div>
             <label for="score">Выберите счет</label>
             <select id="score" name="score">
-              <option>Не выбран счет</option>
+              <option selected>Не выбран счет</option>
               <option>Сбер 2586</option>
               <option>Сбер 2587</option>
               <option>Сбер 2588</option>
@@ -222,6 +223,12 @@
                 Расход
               </button>
             </div>
+            <select id="score" name="score">
+              <option selected>Не выбран счет</option>
+              <option>Сбер 2586</option>
+              <option>Сбер 2587</option>
+              <option>Сбер 2588</option>
+            </select>
 
             <div class="input-group">
               <label class="sr-only" for="date">Дата</label>
@@ -233,6 +240,7 @@
               <!-- <a href="#" id="cancelTransaction" class="button cancel" onclick="Modal.close()">Cancelar</a> -->
               <button class="save">Подтвердить</button>
             </div>
+            <input type="reset" value="reset" />
           </form>
         </div>
       </div>

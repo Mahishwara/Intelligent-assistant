@@ -231,7 +231,6 @@ const Form = {
   clearFields() {
     Form.description.value = "";
     Form.amount.value = "";
-    Form.score.text = "Не выбран счет"
     Form.date.value = "";
     Form.value = "";
   },
