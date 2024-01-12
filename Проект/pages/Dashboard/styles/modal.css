@@ -145,11 +145,11 @@
   justify-content: center;
 }
 
-.buttons-income-expense button.income{
+.buttons-income-expense button.income:focus{
   background: var(--color-green);
 }
 
-.buttons-income-expense button.expense{
+.buttons-income-expense button.expense:focus{
   background: var(--color-red);
 }
 
