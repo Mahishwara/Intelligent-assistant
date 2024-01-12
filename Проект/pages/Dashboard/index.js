@@ -261,6 +261,51 @@ const Form = {
 var ctx = document.getElementById("myChart");
 var myDonutChart;
 
+//create a second diagram of the same myChart2 
+// proba
+// Пример данных
+const data = {
+  labels: [
+      'Доход',
+      'Расход'
+  ],
+  datasets: [{
+      label: 'Доход против Расходов',
+      data: [5000, 3000], // Замените эти числа на ваши реальные значения доходов и расходов
+      backgroundColor: [
+          "#fcff36",
+          "#36ffe7"
+      ],
+      hoverOffset: 4
+  }]
+};
+
+// Конфигурация для графика
+const config = {
+  type: 'doughnut',
+  data: data,
+  options: {
+      responsive: true,
+      plugins: {
+          legend: {
+              position: 'top',
+          },
+          title: {
+              display: true,
+              text: 'Круговая диаграмма Доходы против Расходов'
+          }
+      }
+  },
+};
+
+// Отобразить график
+const myChart2 = new Chart(
+  document.getElementById('myChart2'),
+  config
+);
+// proba
+
+
 
 
 const AddChart = {
@@ -298,7 +343,7 @@ const AddChart = {
             usePointStyle: true,
           },
         ],
-        labels: ["No Transactions"],
+        labels: ["Нет транзакций"],
       };
     }
     return data;
@@ -362,7 +407,7 @@ const AddChart = {
     return options;
   },
 
-  // Обновление графика
+  // Обновление графика 1
   update() {
     let options = this.getOptions();
     let data = this.getData();
@@ -373,7 +418,14 @@ const AddChart = {
       options: options,
     });
   },
+
+
+
+
+
 };
+
+
 
 // Объект приложения
 const App = {
