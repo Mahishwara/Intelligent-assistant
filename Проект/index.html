@@ -159,6 +159,26 @@
       <div class="get-in-touch-right">
         <a class="button get-started">Редактор</a>
       </div>
+
+
+
+    <button data-easy-toggle="#modalWin" data-easy-class="show">outside text</button>
+
+    <div id="modalWin" class="modal">
+      <div class="modal-window">
+        <h1>inside text а как закрыть?!?!?!?!?!</h1>
+
+        <button class="btn-close" data-easy-toggle="#modalWin" data-easy-class="show">X</button>
+      </div>
+      <!-- /.modal-window -->
+      
+      <div class="overlay" data-easy-toggle="#modalwin" data-easy-class="show"></div>
+    </div>
+    <!-- /.modal -->
+
+
+
+
     </div>
   </section>
   <!-- Конец секции связи -->
@@ -174,76 +194,7 @@
 
 
     <!-- Оверлей для модального окна добавления новой транзакции  !!!!!!!!!!!!!!!!!!!!!!-->
-    <div class="modal-overlay" id="modalOverlay">
-      <div class="modal">
-        <div id="form">
-          <div class="modalTop">
-            <h2>Новая транзакция</h2>
-            <!-- Кнопка закрытия модального окна -->
-            <span class="material-icons" id="close-modal-btn" onclick="Modal.close()">close</span>
-          </div>
-          <!-- Форма для ввода деталей транзакции -->
-          <form action="" onsubmit="Form.submit(event)">
-            <!-- Поля ввода для описания, суммы, дохода/расхода и даты -->
-            <div class="input-group">
-              <label class="sr-only" for="description">Описание</label>
-              <input type="text" id="description" name="description" placeholder="Описание" />
-            </div>
-            <label for="score">Выберите счет</label>
-            <select id="score" name="score">
-              <option>Не выбран счет</option>
-              <option>Сбер 2586</option>
-              <option>Сбер 2587</option>
-              <option>Сбер 2588</option>
-            </select>
-            
-
-            <div class="input-group">
-              <label class="sr-only" for="amount">Сумма</label>
-              <input type="number" id="amount" name="amount" step="0.01" placeholder="0.00" />
-              <!-- Вспомогательный текст для выбора дохода или расхода -->
-              <small class="help">Выберите "Доход" для доходов и "Расход" для расходов</small>
-            </div>
-
-            <!-- Кнопки для выбора дохода или расхода -->
-            <div class="buttons-income-expense">
-              <button id="incomeButton" onclick="Form.setIncome(); return false;" class="income">
-                Доход
-              </button>
-              <button id="expenseButton" onclick="Form.setExpense(); return false;">
-                Расход
-              </button>
-            </div>
-
-            <div class="input-group">
-              <label class="sr-only" for="date">Дата</label>
-              <input type="date" id="date" name="date" />
-            </div>
-
-            <!-- Кнопки для отмены или подтверждения транзакции -->
-            <div class="actions">
-              <!-- <a href="#" id="cancelTransaction" class="button cancel" onclick="Modal.close()">Cancelar</a> -->
-              <button class="save">Подтвердить</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <!-- Конец оверлея для модального окна -->
-
-
-        
-          
-
-
-
-
-
-
-
-
-
-
 
 
 
